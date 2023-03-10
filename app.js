@@ -10,6 +10,7 @@ dotenv.config();
 connectDB();
 
 const app = express();
+app.use(express.static("public"))
 
 app.get("/", (req, res) => {
   res.send("API is Running");
@@ -25,8 +26,5 @@ app.use(errorHandler);
 const PORT = 8400 || 9000;
 
 app.listen(
-  PORT,
-  console.log(
-    `Server running in ${process.env.NODE_ENV} on ${PORT}`.cyan.underline
-  )
+  PORT
 );
