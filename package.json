@@ -2,16 +2,16 @@
   "name": "master-fashions-backend",
   "version": "1.0.0",
   "description": "Backend for master-fashions",
-  "main": "server.js",
+  "main": "app.js",
   "type": "module",
   "engines": {
     "node": "14.15.0"
   },
   "scripts": {
-    "dev": "node backend/server",
-    "start": "nodemon backend/server",
-    "data:import": "node backend/seeder",
-    "data:destroy": "node backend/seeder -d",
+    "dev": "node app.js",
+    "start": "nodemon app.js",
+    "data:import": "node seeder",
+    "data:destroy": "node seeder -d",
     "build": "npm install && npm run build"
   },
   "author": "George Gitau",
