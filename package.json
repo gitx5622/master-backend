@@ -9,10 +9,9 @@
   },
   "scripts": {
     "dev": "node app",
-    "start": "nodemon app",
+    "start": "node app",
     "data:import": "node seeder",
-    "data:destroy": "node seeder -d",
-    "build": "npm install && npm run build"
+    "data:destroy": "node seeder -d"
   },
   "author": "George Gitau",
   "license": "ISC",
