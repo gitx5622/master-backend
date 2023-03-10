@@ -24,9 +24,11 @@ app.use(notFound);
 app.use(errorHandler);
 
 const PORT = process.env.NODE_ENV || 9000;
+const HOST = '0.0.0.0';
 
 app.listen(
   PORT,
+  HOST,
   console.log(
     `Server running in ${process.env.NODE_ENV} on ${PORT}`.cyan.underline
   )
