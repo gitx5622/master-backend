@@ -8,8 +8,8 @@
     "node": "14.15.0"
   },
   "scripts": {
-    "dev": "node app.js",
-    "start": "nodemon app.js",
+    "dev": "node app",
+    "start": "nodemon app",
     "data:import": "node seeder",
     "data:destroy": "node seeder -d",
     "build": "npm install && npm run build"
