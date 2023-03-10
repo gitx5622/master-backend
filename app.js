@@ -23,8 +23,11 @@ app.use("/api/users", userRoutes);
 app.use(notFound);
 app.use(errorHandler);
 
-const PORT = 8400 || 9000;
+const PORT = process.env.NODE_ENV || 9000;
 
 app.listen(
-  PORT
+  PORT,
+  console.log(
+    `Server running in ${process.env.NODE_ENV} on ${PORT}`.cyan.underline
+  )
 );
