@@ -10,7 +10,7 @@ dotenv.config();
 connectDB();
 
 const app = express();
-app.use(express.static("public"))
+
 app.use(cors({
   origin: "http://localhost:3000", 
   credentials: true,
@@ -27,7 +27,7 @@ app.use("/api/users", userRoutes);
 app.use(notFound);
 app.use(errorHandler);
 
-const PORT = process.env.NODE_ENV || 9000;
+const PORT = process.env.PORT || 9000;
 const HOST = '0.0.0.0';
 
 app.listen(
